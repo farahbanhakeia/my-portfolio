@@ -13,8 +13,8 @@
   --color-text-secondary: #475569;
   --color-text-muted: #94a3b8;
 
-  --color-accent: #2563eb;
-  --color-accent-dim: #1d4ed8;
+  --color-accent: #eec0c8;
+  --color-accent-dim: #e4a8b3;
 
   --color-border: #e5e7eb;
   --color-border-hover: #d1d5db;
@@ -34,7 +34,7 @@ body {
 }
 
 ::selection {
-  background-color: rgba(37, 99, 235, 0.12);
+  background-color: rgba(238, 192, 200, 0.25);
   color: #0f172a;
 }
 

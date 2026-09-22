@@ -45,7 +45,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.15 }}
-          className="inline-flex items-center gap-3 px-8 py-3.5 bg-accent text-white font-mono text-sm tracking-wider rounded-lg hover:bg-accent-dim transition-colors mb-10"
+          className="inline-flex items-center gap-3 px-8 py-3.5 bg-accent text-text-primary font-mono text-sm tracking-wider rounded-lg hover:bg-accent-dim transition-colors mb-10"
         >
           <Mail size={16} />
           farahbanhakeia01@gmail.com

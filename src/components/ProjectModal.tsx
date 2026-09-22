@@ -102,7 +102,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-white font-mono text-xs tracking-wider rounded-lg hover:bg-accent-dim transition-colors"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-text-primary font-mono text-xs tracking-wider rounded-lg hover:bg-accent-dim transition-colors"
                 >
                   SOURCE CODE
                   <ExternalLink size={14} />

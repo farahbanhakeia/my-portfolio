@@ -74,7 +74,7 @@ export default function Projects() {
                 <div className="flex items-center gap-3">
                   <button
                     onClick={() => setSelectedProject(project)}
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-accent text-white text-xs font-medium rounded-lg hover:bg-accent-dim transition-colors"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-accent text-text-primary text-xs font-medium rounded-lg hover:bg-accent-dim transition-colors"
                   >
                     Case Study
                     <ArrowRight size={14} />

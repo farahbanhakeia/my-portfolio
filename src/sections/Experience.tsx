@@ -32,7 +32,7 @@ export default function Experience() {
                 {exp.period}
               </span>
               {exp.current && (
-                <span className="px-2.5 py-0.5 font-mono text-[10px] text-white bg-accent rounded-full tracking-wider">
+                <span className="px-2.5 py-0.5 font-mono text-[10px] text-text-primary bg-accent rounded-full tracking-wider">
                   CURRENT
                 </span>
               )}
