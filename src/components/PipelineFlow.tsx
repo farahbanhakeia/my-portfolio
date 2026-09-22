@@ -16,11 +16,11 @@ export default function PipelineFlow({
       <div className="flex flex-col items-center gap-0">
         {nodes.map((node, i) => (
           <div key={node.id} className="flex flex-col items-center">
-            <div className="px-4 py-2 border border-border bg-white rounded-lg font-mono text-xs text-text-secondary tracking-wider hover:border-accent/30 hover:text-accent transition-colors">
+            <div className="px-4 py-2 glass rounded-lg font-mono text-xs text-text-secondary tracking-wider hover:text-accent transition-colors">
               {node.label}
             </div>
             {i < nodes.length - 1 && (
-              <div className="w-px h-6 bg-border" />
+              <div className="w-px h-6 bg-accent/20" />
             )}
           </div>
         ))}
@@ -69,7 +69,7 @@ export default function PipelineFlow({
             {level.map((node) => (
               <div
                 key={node.id}
-                className="px-4 py-2 border border-border bg-white rounded-lg font-mono text-xs text-text-secondary tracking-wider hover:border-accent/30 hover:text-accent transition-colors"
+                className="px-4 py-2 glass rounded-lg font-mono text-xs text-text-secondary tracking-wider hover:text-accent transition-colors"
               >
                 {node.label}
               </div>
@@ -77,7 +77,7 @@ export default function PipelineFlow({
           </div>
           {li < levels.length - 1 && (
             <div className="flex items-center justify-center py-1">
-              <div className="w-px h-6 bg-border" />
+              <div className="w-px h-6 bg-accent/20" />
             </div>
           )}
         </div>

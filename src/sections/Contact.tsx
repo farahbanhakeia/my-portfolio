@@ -5,9 +5,13 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-20 md:py-28 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto relative"
+      className="py-20 md:py-28 px-4 sm:px-6 md:px-8 relative overflow-hidden"
     >
-      <div className="text-center">
+      <div className="absolute inset-0 mesh-gradient" />
+      <div className="absolute inset-0 grid-bg opacity-20" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent/8 rounded-full blur-[140px] pointer-events-none" />
+
+      <div className="relative z-10 text-center max-w-6xl mx-auto">
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -47,7 +51,7 @@ export default function Contact() {
           transition={{ duration: 0.5, delay: 0.15 }}
           whileHover={{ scale: 1.05, y: -3 }}
           whileTap={{ scale: 0.97 }}
-          className="inline-flex items-center gap-3 px-8 py-3.5 bg-accent text-text-primary font-mono text-sm tracking-wider rounded-lg hover:bg-accent-dim transition-colors mb-10 shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30"
+          className="inline-flex items-center gap-3 px-8 py-3.5 bg-gradient-to-r from-accent-dim to-accent text-text-primary font-mono text-sm tracking-wider rounded-xl hover:shadow-xl hover:shadow-accent/30 transition-all mb-10 animate-gradient glow-accent"
         >
           <Mail size={16} />
           farahbanhakeia01@gmail.com

@@ -21,10 +21,10 @@ function FlowingArrow({ delay }: { delay: number }) {
     >
       <path d="M0 5H22M22 5L18 1M22 5L18 9" stroke="var(--color-border-hover)" strokeWidth="1.5" />
       <motion.circle
-        cx="0"
         cy="5"
         r="2"
         fill="var(--color-accent)"
+        initial={{ cx: 0, opacity: 0 }}
         animate={{ cx: [0, 22], opacity: [0, 1, 1, 0] }}
         transition={{ duration: 1.5, repeat: Infinity, delay, ease: 'easeInOut' }}
       />
@@ -34,8 +34,9 @@ function FlowingArrow({ delay }: { delay: number }) {
 
 export default function DataPipeline() {
   return (
-    <section className="py-20 md:py-28 px-4 sm:px-6 md:px-8 bg-bg-secondary relative overflow-hidden">
+    <section className="py-20 md:py-28 px-4 sm:px-6 md:px-8 section-gradient relative overflow-hidden">
       <div className="absolute inset-0 animate-shimmer" />
+      <div className="absolute inset-0 dot-bg opacity-15" />
 
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.div
@@ -70,7 +71,7 @@ export default function DataPipeline() {
               <motion.div
                 whileHover={{ y: -4, scale: 1.03 }}
                 transition={{ duration: 0.2 }}
-                className="flex-1 text-center px-3 py-4 bg-white border border-border rounded-lg hover:border-accent hover:shadow-md hover:shadow-accent/10 transition-all duration-300 cursor-default"
+                className="flex-1 text-center px-3 py-4 glass rounded-lg hover:shadow-md hover:shadow-accent/10 transition-all duration-300 cursor-default"
               >
                 <p className="font-mono text-[11px] font-medium text-text-primary tracking-wider mb-0.5 truncate">
                   {step.label}
@@ -101,7 +102,7 @@ export default function DataPipeline() {
               >
                 {String(i + 1).padStart(2, '0')}
               </motion.span>
-              <div className="flex-1 flex items-center justify-between p-3 bg-white border border-border rounded-lg">
+              <div className="flex-1 flex items-center justify-between p-3 glass rounded-lg">
                 <p className="font-mono text-[11px] font-medium text-text-primary tracking-wider">
                   {step.label}
                 </p>

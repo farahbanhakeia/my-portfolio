@@ -30,7 +30,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/90 backdrop-blur-lg border-b border-border shadow-sm'
+          ? 'glass-strong border-b border-border shadow-sm'
           : 'bg-transparent'
       }`}
     >
@@ -83,7 +83,7 @@ export default function Navbar() {
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden fixed inset-0 top-16 bg-white/98 backdrop-blur-lg z-30">
+        <div className="md:hidden fixed inset-0 top-16 glass-strong z-30">
           <div className="flex flex-col items-center justify-center h-full gap-8 -mt-16">
             {NAV_ITEMS.map((item) => (
               <a

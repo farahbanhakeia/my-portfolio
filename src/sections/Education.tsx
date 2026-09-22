@@ -9,7 +9,7 @@ const EDUCATION = [
 
 export default function Education() {
   return (
-    <section className="py-20 md:py-28 px-4 sm:px-6 md:px-8 bg-bg-secondary relative overflow-hidden">
+    <section className="py-20 md:py-28 px-4 sm:px-6 md:px-8 section-gradient-alt relative overflow-hidden">
       <div className="absolute inset-0 dot-bg opacity-20" />
 
       <div className="max-w-6xl mx-auto relative z-10">
@@ -37,7 +37,7 @@ export default function Education() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               whileHover={{ y: -6, scale: 1.02, transition: { duration: 0.25 } }}
-              className="p-6 border border-border rounded-xl bg-white hover:border-accent hover:shadow-lg hover:shadow-accent/10 transition-all duration-300"
+              className="p-6 glass rounded-xl hover:shadow-lg hover:shadow-accent/10 transition-all duration-300"
             >
               <span className="font-mono text-xs text-accent tracking-wider">
                 {edu.period}
@@ -64,7 +64,7 @@ export default function Education() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: ci * 0.08 }}
                   whileHover={{ x: 4, transition: { duration: 0.2 } }}
-                  className="flex items-center justify-between p-3.5 border border-border rounded-lg bg-white hover:border-accent/40 hover:shadow-md hover:shadow-accent/5 transition-all duration-300"
+                  className="flex items-center justify-between p-3.5 glass rounded-lg hover:shadow-md hover:shadow-accent/5 transition-all duration-300"
                 >
                   <div>
                     <p className="text-text-primary text-sm">{cert.title}</p>
@@ -73,7 +73,7 @@ export default function Education() {
                   <span
                     className={`font-mono text-[10px] tracking-wider px-2.5 py-1 rounded-full ${
                       cert.status === 'completed'
-                        ? 'text-accent bg-accent/10 border border-accent/20'
+                        ? 'text-accent-dim bg-accent/10 border border-accent/20'
                         : 'text-amber-600 bg-amber-50 border border-amber-200'
                     }`}
                   >
@@ -97,7 +97,7 @@ export default function Education() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: li * 0.08 }}
                   whileHover={{ x: -4, transition: { duration: 0.2 } }}
-                  className="flex items-center justify-between p-3.5 border border-border rounded-lg bg-white hover:border-accent/40 hover:shadow-md hover:shadow-accent/5 transition-all duration-300"
+                  className="flex items-center justify-between p-3.5 glass rounded-lg hover:shadow-md hover:shadow-accent/5 transition-all duration-300"
                 >
                   <p className="text-text-primary text-sm">{lang.name}</p>
                   <span className="font-mono text-[10px] text-text-muted tracking-wider">

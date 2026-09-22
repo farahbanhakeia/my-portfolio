@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-border py-8 px-4 sm:px-6 md:px-8 bg-bg-secondary">
+    <footer className="border-t border-border py-8 px-4 sm:px-6 md:px-8 glass-strong">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="font-mono text-xs text-text-muted tracking-wider">
           FARAH BANHAKEIA / 2026

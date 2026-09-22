@@ -12,21 +12,25 @@ const DOMAINS = [
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
+      <div className="absolute inset-0 mesh-gradient" />
       <FloatingParticles />
-      <div className="absolute inset-0 dot-bg opacity-30" />
+      <div className="absolute inset-0 grid-bg opacity-50" />
+
+      <div className="absolute top-20 right-[10%] w-72 h-72 bg-accent/10 rounded-full blur-[100px] animate-float-slow" />
+      <div className="absolute bottom-20 left-[5%] w-96 h-96 bg-accent/8 rounded-full blur-[120px] animate-float-medium" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 md:px-8 w-full">
         <motion.p
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="font-mono text-xs text-accent tracking-[0.25em] mb-8"
+          className="font-mono text-xs text-accent-dim tracking-[0.25em] mb-8"
         >
           DATA & AI ENGINEERING
           <motion.span
             animate={{ opacity: [1, 0, 1] }}
             transition={{ duration: 1, repeat: Infinity, times: [0, 0.5, 0.5] }}
-            className="inline-block w-[2px] h-3 bg-accent ml-1 align-middle"
+            className="inline-block w-[2px] h-3 bg-accent-dim ml-1 align-middle"
           />
         </motion.p>
 
@@ -38,10 +42,10 @@ export default function Hero() {
         >
           Farah{' '}
           <motion.span
-            className="text-accent inline-block"
+            className="inline-block bg-gradient-to-r from-accent-dim to-accent bg-clip-text text-transparent"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
+            transition={{ duration: 0.7, delay: 0.35 }}
           >
             Banhakeia
           </motion.span>
@@ -78,12 +82,12 @@ export default function Hero() {
             >
               {i > 0 && (
                 <motion.span
-                  animate={{ scale: [1, 1.5, 1] }}
+                  animate={{ scale: [1, 1.5, 1], opacity: [0.4, 1, 0.4] }}
                   transition={{ duration: 2, repeat: Infinity, delay: i * 0.4 }}
-                  className="w-1 h-1 rounded-full bg-accent"
+                  className="w-1.5 h-1.5 rounded-full bg-accent"
                 />
               )}
-              <span className="font-mono text-[11px] text-text-muted tracking-wider hover:text-accent transition-colors">
+              <span className="font-mono text-[11px] text-text-muted tracking-wider hover:text-accent-dim transition-colors">
                 {domain}
               </span>
             </motion.span>
@@ -94,13 +98,13 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1 }}
-          className="flex flex-wrap gap-3"
+          className="flex flex-wrap gap-4"
         >
           <motion.a
             href="#projects"
             whileHover={{ scale: 1.04, y: -2 }}
             whileTap={{ scale: 0.97 }}
-            className="px-6 py-3 bg-accent text-text-primary text-sm font-medium rounded-lg hover:bg-accent-dim transition-colors shadow-md shadow-accent/20"
+            className="px-7 py-3 bg-gradient-to-r from-accent-dim to-accent text-text-primary text-sm font-medium rounded-xl hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 animate-gradient"
           >
             Explore Projects
           </motion.a>
@@ -108,7 +112,7 @@ export default function Hero() {
             href="#contact"
             whileHover={{ scale: 1.04, y: -2 }}
             whileTap={{ scale: 0.97 }}
-            className="px-6 py-3 border border-border text-text-secondary text-sm font-medium rounded-lg hover:border-accent hover:text-accent transition-colors"
+            className="px-7 py-3 glass rounded-xl text-text-secondary text-sm font-medium hover:border-accent transition-all duration-300"
           >
             Let's Connect
           </motion.a>
@@ -126,10 +130,10 @@ export default function Hero() {
             transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
             className="flex flex-col items-center gap-2"
           >
-            <span className="font-mono text-[9px] text-text-muted/40 tracking-widest">
+            <span className="font-mono text-[9px] text-text-muted/50 tracking-widest">
               SCROLL
             </span>
-            <div className="w-px h-8 bg-gradient-to-b from-accent/40 to-transparent" />
+            <div className="w-px h-8 bg-gradient-to-b from-accent to-transparent" />
           </motion.div>
         </motion.div>
       </div>

@@ -36,7 +36,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 40, scale: 0.97 }}
             transition={{ duration: 0.3 }}
-            className="w-full max-w-4xl bg-white border border-border rounded-2xl my-8 shadow-xl"
+            className="w-full max-w-4xl glass-strong rounded-2xl my-8 shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between p-6 border-b border-border">
@@ -102,7 +102,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-text-primary font-mono text-xs tracking-wider rounded-lg hover:bg-accent-dim transition-colors"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-accent-dim to-accent text-text-primary font-mono text-xs tracking-wider rounded-lg hover:shadow-md hover:shadow-accent/20 transition-all animate-gradient"
                 >
                   SOURCE CODE
                   <ExternalLink size={14} />
