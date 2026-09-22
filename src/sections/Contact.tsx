@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-20 md:py-28 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto"
+      className="py-20 md:py-28 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto relative"
     >
       <div className="text-center">
         <motion.p
@@ -19,10 +19,10 @@ export default function Contact() {
         </motion.p>
 
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.05 }}
+          transition={{ duration: 0.6, delay: 0.05 }}
           className="text-2xl md:text-3xl font-bold tracking-tight mb-4"
         >
           Let's build something with data.
@@ -45,7 +45,9 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.15 }}
-          className="inline-flex items-center gap-3 px-8 py-3.5 bg-accent text-text-primary font-mono text-sm tracking-wider rounded-lg hover:bg-accent-dim transition-colors mb-10"
+          whileHover={{ scale: 1.05, y: -3 }}
+          whileTap={{ scale: 0.97 }}
+          className="inline-flex items-center gap-3 px-8 py-3.5 bg-accent text-text-primary font-mono text-sm tracking-wider rounded-lg hover:bg-accent-dim transition-colors mb-10 shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30"
         >
           <Mail size={16} />
           farahbanhakeia01@gmail.com
@@ -58,25 +60,27 @@ export default function Contact() {
           transition={{ duration: 0.5, delay: 0.25 }}
           className="flex items-center justify-center gap-8"
         >
-          <a
+          <motion.a
             href="https://github.com/farahbanhakeia"
             target="_blank"
             rel="noopener noreferrer"
+            whileHover={{ y: -2 }}
             className="inline-flex items-center gap-2 font-mono text-xs text-text-muted hover:text-accent transition-colors tracking-wider"
           >
             GITHUB
             <ExternalLink size={12} />
-          </a>
+          </motion.a>
           <span className="text-border">|</span>
-          <a
+          <motion.a
             href="https://www.linkedin.com/in/farah-banhakeia-09591a41a/"
             target="_blank"
             rel="noopener noreferrer"
+            whileHover={{ y: -2 }}
             className="inline-flex items-center gap-2 font-mono text-xs text-text-muted hover:text-accent transition-colors tracking-wider"
           >
             LINKEDIN
             <ExternalLink size={12} />
-          </a>
+          </motion.a>
         </motion.div>
       </div>
     </section>

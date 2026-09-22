@@ -31,11 +31,12 @@ export default function Projects() {
         {mainProjects.map((project, pi) => (
           <motion.div
             key={project.id}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-60px' }}
-            transition={{ duration: 0.4, delay: pi * 0.08 }}
-            className="group border border-border rounded-xl p-6 md:p-8 hover:border-accent/25 transition-colors"
+            transition={{ duration: 0.5, delay: pi * 0.1 }}
+            whileHover={{ y: -3, transition: { duration: 0.2 } }}
+            className="group border border-border rounded-xl p-6 md:p-8 hover:border-accent hover:shadow-xl hover:shadow-accent/10 transition-all duration-300"
           >
             <div className="flex flex-col lg:flex-row lg:items-start gap-6">
               <div className="flex-1 min-w-0">
@@ -43,7 +44,7 @@ export default function Projects() {
                   {project.badge}
                 </span>
 
-                <h3 className="text-lg md:text-xl font-semibold text-text-primary mb-3">
+                <h3 className="text-lg md:text-xl font-semibold text-text-primary mb-3 group-hover:text-accent transition-colors duration-300">
                   {project.title}
                 </h3>
 
@@ -62,32 +63,37 @@ export default function Projects() {
 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech) => (
-                    <span
+                    <motion.span
                       key={tech}
-                      className="px-2.5 py-1 font-mono text-[11px] text-text-muted border border-border rounded-md"
+                      whileHover={{ scale: 1.08, y: -1 }}
+                      className="px-2.5 py-1 font-mono text-[11px] text-text-muted border border-border rounded-md hover:border-accent hover:text-accent transition-all duration-200 cursor-default"
                     >
                       {tech}
-                    </span>
+                    </motion.span>
                   ))}
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <button
+                  <motion.button
                     onClick={() => setSelectedProject(project)}
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-accent text-text-primary text-xs font-medium rounded-lg hover:bg-accent-dim transition-colors"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-accent text-text-primary text-xs font-medium rounded-lg hover:bg-accent-dim transition-colors shadow-md shadow-accent/15"
                   >
                     Case Study
                     <ArrowRight size={14} />
-                  </button>
-                  <a
+                  </motion.button>
+                  <motion.a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                     className="inline-flex items-center gap-2 px-4 py-2 border border-border text-text-muted text-xs font-medium rounded-lg hover:border-accent hover:text-accent transition-colors"
                   >
                     GitHub
                     <ExternalLink size={14} />
-                  </a>
+                  </motion.a>
                 </div>
               </div>
 
@@ -96,13 +102,17 @@ export default function Projects() {
                   KEY METRICS
                 </p>
                 <div className="space-y-2">
-                  {project.concepts.slice(0, 4).map((concept) => (
-                    <div
+                  {project.concepts.slice(0, 4).map((concept, ci) => (
+                    <motion.div
                       key={concept}
-                      className="px-3 py-2 bg-bg-secondary rounded-md font-mono text-[11px] text-text-secondary"
+                      initial={{ opacity: 0, x: 10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.3, delay: 0.3 + ci * 0.06 }}
+                      className="px-3 py-2 bg-bg-secondary rounded-md font-mono text-[11px] text-text-secondary hover:bg-accent/10 transition-colors"
                     >
                       {concept}
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </div>
@@ -112,9 +122,15 @@ export default function Projects() {
       </div>
 
       <div className="mt-16">
-        <p className="font-mono text-xs text-text-muted tracking-wider mb-6">
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4 }}
+          className="font-mono text-xs text-text-muted tracking-wider mb-6"
+        >
           ADDITIONAL PROJECTS
-        </p>
+        </motion.p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {secondaryProjects.map((project, si) => (
             <motion.a
@@ -122,11 +138,12 @@ export default function Projects() {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 12 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: si * 0.06 }}
-              className="group p-5 border border-border rounded-xl hover:border-accent/20 transition-colors"
+              transition={{ duration: 0.4, delay: si * 0.08 }}
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
+              className="group p-5 border border-border rounded-xl hover:border-accent hover:shadow-lg hover:shadow-accent/10 transition-all duration-300"
             >
               <div className="flex items-start justify-between mb-2">
                 <div>
@@ -139,7 +156,7 @@ export default function Projects() {
                 </div>
                 <ExternalLink
                   size={14}
-                  className="text-text-muted/30 group-hover:text-accent/60 transition-colors flex-shrink-0 mt-1"
+                  className="text-text-muted/30 group-hover:text-accent transition-colors flex-shrink-0 mt-1"
                 />
               </div>
               <p className="text-text-muted text-xs leading-relaxed mb-3">

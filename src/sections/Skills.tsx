@@ -21,11 +21,12 @@ export default function Skills() {
         {skills.map((category, ci) => (
           <motion.div
             key={category.domain}
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: ci * 0.06 }}
-            className="p-6 border border-border rounded-xl"
+            transition={{ duration: 0.5, delay: ci * 0.08 }}
+            whileHover={{ y: -4, transition: { duration: 0.25 } }}
+            className="p-6 border border-border rounded-xl hover:border-accent hover:shadow-lg hover:shadow-accent/10 transition-all duration-300"
           >
             <p className="font-mono text-xs text-accent tracking-wider mb-1">
               {category.domain}
@@ -34,13 +35,18 @@ export default function Skills() {
               {category.description}
             </p>
             <div className="flex flex-wrap gap-2">
-              {category.tools.map((tool) => (
-                <span
+              {category.tools.map((tool, ti) => (
+                <motion.span
                   key={tool}
-                  className="px-2.5 py-1 font-mono text-[11px] text-text-secondary bg-bg-secondary rounded-md"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: ci * 0.08 + ti * 0.03 }}
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  className="px-2.5 py-1 font-mono text-[11px] text-text-secondary bg-bg-secondary rounded-md hover:bg-accent/20 hover:text-text-primary transition-all duration-200 cursor-default"
                 >
                   {tool}
-                </span>
+                </motion.span>
               ))}
             </div>
           </motion.div>

@@ -33,16 +33,22 @@ export default function HowIWork() {
         {STEPS.map((step, i) => (
           <motion.div
             key={step.num}
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.3, delay: i * 0.05 }}
-            className="text-center p-4"
+            transition={{ duration: 0.4, delay: i * 0.07, ease: [0.25, 0.1, 0.25, 1] }}
+            whileHover={{ y: -6, scale: 1.05, transition: { duration: 0.2 } }}
+            className="text-center p-5 rounded-xl hover:bg-bg-secondary hover:shadow-md hover:shadow-accent/10 transition-all duration-300 cursor-default group"
           >
-            <p className="font-mono text-2xl font-light text-accent/25 mb-2">
+            <motion.p
+              className="font-mono text-3xl font-light text-accent/30 mb-2 group-hover:text-accent transition-colors duration-300"
+              whileInView={{ opacity: [0, 1] }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+            >
               {step.num}
-            </p>
-            <p className="text-sm font-medium text-text-primary mb-1">
+            </motion.p>
+            <p className="text-sm font-medium text-text-primary mb-1 group-hover:text-accent transition-colors duration-300">
               {step.title}
             </p>
             <p className="text-xs text-text-muted leading-relaxed">

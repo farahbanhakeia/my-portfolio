@@ -56,18 +56,24 @@ export default function WhatIBuild() {
         {DOMAINS.map((domain, i) => (
           <motion.div
             key={domain.title}
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: i * 0.06 }}
-            className="group p-6 border border-border rounded-xl hover:border-accent/30 transition-colors"
+            transition={{ duration: 0.5, delay: i * 0.08 }}
+            whileHover={{ y: -6, transition: { duration: 0.25 } }}
+            className="group p-6 border border-border rounded-xl hover:border-accent hover:shadow-lg hover:shadow-accent/10 transition-all duration-300 cursor-default"
           >
-            <domain.icon
-              size={20}
-              className="text-accent mb-4"
-              strokeWidth={1.5}
-            />
-            <h3 className="text-base font-semibold text-text-primary mb-2">
+            <motion.div
+              whileHover={{ rotate: [0, -10, 10, 0] }}
+              transition={{ duration: 0.5 }}
+            >
+              <domain.icon
+                size={22}
+                className="text-accent mb-4 group-hover:scale-110 transition-transform duration-300"
+                strokeWidth={1.5}
+              />
+            </motion.div>
+            <h3 className="text-base font-semibold text-text-primary mb-2 group-hover:text-accent transition-colors">
               {domain.title}
             </h3>
             <p className="text-text-secondary text-sm leading-relaxed mb-4">
