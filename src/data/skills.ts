@@ -1,74 +1,38 @@
 export interface SkillCategory {
   domain: string
-  areas: { name: string; tools: string[] }[]
+  description: string
+  tools: string[]
 }
 
 export const skills: SkillCategory[] = [
   {
-    domain: 'DATA SCIENCE',
-    areas: [
-      { name: 'Statistics', tools: ['Pandas', 'NumPy'] },
-      { name: 'ML', tools: ['Scikit-learn'] },
-      { name: 'Data Analysis', tools: ['Matplotlib', 'Seaborn'] },
-    ],
-  },
-  {
-    domain: 'DEEP LEARNING',
-    areas: [
-      { name: 'CNN', tools: ['PyTorch'] },
-      { name: 'DL', tools: ['TensorFlow'] },
-    ],
-  },
-  {
-    domain: 'COMPUTER VISION',
-    areas: [
-      { name: 'Detection', tools: ['YOLO'] },
-      { name: 'Recognition', tools: ['OpenCV', 'ArcFace'] },
-    ],
-  },
-  {
-    domain: 'NLP',
-    areas: [
-      { name: 'Text Processing', tools: ['LLMs'] },
-      { name: 'Translation', tools: ['Transformers'] },
-    ],
-  },
-  {
-    domain: 'OPTIMIZATION',
-    areas: [
-      { name: 'CSP', tools: ['OR-Tools'] },
-      { name: 'Metaheuristics', tools: ['GWO', 'CS', 'TS'] },
-    ],
+    domain: 'DATA ANALYTICS',
+    description: 'Exploration, visualization, and business intelligence',
+    tools: ['Python', 'Pandas', 'NumPy', 'SQL', 'Power BI', 'DAX', 'Excel', 'Matplotlib', 'Seaborn'],
   },
   {
     domain: 'DATA ENGINEERING',
-    areas: [
-      { name: 'ETL', tools: ['Apache Spark'] },
-      { name: 'Databases', tools: ['PostgreSQL', 'MongoDB', 'SQL'] },
-    ],
+    description: 'Data pipelines, APIs, and database systems',
+    tools: ['Python', 'SQL', 'PostgreSQL', 'MongoDB', 'REST APIs', 'ETL', 'Spring Boot', 'Express'],
   },
   {
-    domain: 'PROGRAMMING',
-    areas: [
-      { name: 'Python (Expert)', tools: ['FastAPI'] },
-      { name: 'Java', tools: ['Spring Boot'] },
-      { name: 'JavaScript', tools: ['React', 'Node.js'] },
-    ],
+    domain: 'MACHINE LEARNING',
+    description: 'Predictive modeling and statistical learning',
+    tools: ['Scikit-learn', 'Feature Engineering', 'Model Evaluation', 'Classification', 'Regression'],
   },
   {
-    domain: 'BI & VISUALIZATION',
-    areas: [
-      { name: 'Dashboards', tools: ['Power BI'] },
-      { name: 'Visualization', tools: ['Matplotlib', 'Seaborn'] },
-    ],
+    domain: 'DEEP LEARNING & AI',
+    description: 'Neural networks and intelligent systems',
+    tools: ['PyTorch', 'CNN', 'YOLO', 'ArcFace', 'OR-Tools', 'LLMs'],
   },
   {
-    domain: 'MLOPS',
-    areas: [
-      { name: 'Containers', tools: ['Docker'] },
-      { name: 'Tracking', tools: ['MLflow'] },
-      { name: 'CI/CD', tools: ['GitHub Actions'] },
-      { name: 'Cloud', tools: ['AWS'] },
-    ],
+    domain: 'COMPUTER VISION',
+    description: 'Image processing and visual recognition',
+    tools: ['OpenCV', 'YOLO', 'Ultralytics', 'Object Detection', 'Face Recognition'],
+  },
+  {
+    domain: 'SOFTWARE ENGINEERING',
+    description: 'Application development and version control',
+    tools: ['Git', 'GitHub', 'React', 'Node.js', 'Java', 'Angular'],
   },
 ]

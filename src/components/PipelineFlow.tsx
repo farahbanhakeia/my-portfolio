@@ -16,19 +16,11 @@ export default function PipelineFlow({
       <div className="flex flex-col items-center gap-0">
         {nodes.map((node, i) => (
           <div key={node.id} className="flex flex-col items-center">
-            <div className="px-4 py-2 border border-accent/12 bg-white rounded-lg font-mono text-xs text-text-secondary tracking-wider hover:border-accent/30 hover:text-accent transition-colors duration-300 shadow-sm">
+            <div className="px-4 py-2 border border-border bg-white rounded-lg font-mono text-xs text-text-secondary tracking-wider hover:border-accent/30 hover:text-accent transition-colors">
               {node.label}
             </div>
             {i < nodes.length - 1 && (
-              <div className="w-px h-6 bg-accent/15 relative overflow-hidden">
-                <div
-                  className="absolute inset-0 w-full bg-accent/50"
-                  style={{
-                    animation: `flow-down 2s linear infinite`,
-                    animationDelay: `${i * 0.3}s`,
-                  }}
-                />
-              </div>
+              <div className="w-px h-6 bg-border" />
             )}
           </div>
         ))}
@@ -77,7 +69,7 @@ export default function PipelineFlow({
             {level.map((node) => (
               <div
                 key={node.id}
-                className="px-4 py-2 border border-accent/12 bg-white rounded-lg font-mono text-xs text-text-secondary tracking-wider hover:border-accent/30 hover:text-accent transition-colors duration-300 shadow-sm"
+                className="px-4 py-2 border border-border bg-white rounded-lg font-mono text-xs text-text-secondary tracking-wider hover:border-accent/30 hover:text-accent transition-colors"
               >
                 {node.label}
               </div>
@@ -85,15 +77,7 @@ export default function PipelineFlow({
           </div>
           {li < levels.length - 1 && (
             <div className="flex items-center justify-center py-1">
-              <div className="w-px h-6 bg-accent/15 relative overflow-hidden">
-                <div
-                  className="absolute inset-0 w-full bg-accent/50"
-                  style={{
-                    animation: `flow-down 2s linear infinite`,
-                    animationDelay: `${li * 0.3}s`,
-                  }}
-                />
-              </div>
+              <div className="w-px h-6 bg-border" />
             </div>
           )}
         </div>

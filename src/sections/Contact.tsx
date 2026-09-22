@@ -5,21 +5,31 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-24 md:py-32 px-4 md:px-8 max-w-7xl mx-auto"
+      className="py-20 md:py-28 px-4 sm:px-6 md:px-8 max-w-6xl mx-auto"
     >
       <div className="text-center">
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="font-mono text-xs text-accent tracking-[0.2em] mb-4"
+        >
+          CONTACT
+        </motion.p>
+
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold tracking-tight mb-4"
+          transition={{ duration: 0.5, delay: 0.05 }}
+          className="text-2xl md:text-3xl font-bold tracking-tight mb-4"
         >
-          <span className="gradient-text">LET'S BUILD INTELLIGENT SYSTEMS.</span>
+          Let's build something with data.
         </motion.h2>
 
         <motion.p
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
@@ -31,12 +41,11 @@ export default function Contact() {
 
         <motion.a
           href="mailto:farahbanhakeia01@gmail.com"
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          whileHover={{ y: -2, boxShadow: '0 8px 30px rgba(147, 51, 234, 0.18)' }}
-          className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-accent to-accent-warm text-white font-mono text-sm tracking-wider rounded-xl transition-all duration-300 mb-12"
+          transition={{ duration: 0.5, delay: 0.15 }}
+          className="inline-flex items-center gap-3 px-8 py-3.5 bg-accent text-white font-mono text-sm tracking-wider rounded-lg hover:bg-accent-dim transition-colors mb-10"
         >
           <Mail size={16} />
           farahbanhakeia01@gmail.com
@@ -46,7 +55,7 @@ export default function Contact() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.25 }}
           className="flex items-center justify-center gap-8"
         >
           <a
@@ -58,7 +67,7 @@ export default function Contact() {
             GITHUB
             <ExternalLink size={12} />
           </a>
-          <span className="text-accent/20">|</span>
+          <span className="text-border">|</span>
           <a
             href="https://www.linkedin.com/in/farah-banhakeia-09591a41a/"
             target="_blank"

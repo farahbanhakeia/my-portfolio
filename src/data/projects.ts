@@ -37,6 +37,7 @@ export interface SecondaryProject {
   description: string
   github: string
   tags: string[]
+  category: string
 }
 
 export const mainProjects: Project[] = [
@@ -69,14 +70,7 @@ export const mainProjects: Project[] = [
       ],
     },
     technologies: ['Python', 'YOLO', 'OpenCV', 'PyTorch', 'Ultralytics'],
-    concepts: [
-      'FPS',
-      'LATENCY',
-      'INFERENCE TIME',
-      'DETECTIONS',
-      'CONFIDENCE',
-      'MODEL SIZE',
-    ],
+    concepts: ['FPS', 'LATENCY', 'INFERENCE TIME', 'DETECTIONS', 'CONFIDENCE', 'MODEL SIZE'],
     sections: {
       problem:
         'Comparing object detection models requires a unified evaluation framework that controls for variables like input resolution, hardware, and post-processing to ensure fair benchmarking.',
@@ -187,14 +181,7 @@ export const mainProjects: Project[] = [
         { from: 'csp', to: 'schedule' },
       ],
     },
-    technologies: [
-      'React',
-      'Node.js',
-      'MongoDB',
-      'REST API',
-      'CSP',
-      'Express',
-    ],
+    technologies: ['React', 'Node.js', 'MongoDB', 'REST API', 'CSP', 'Express'],
     concepts: [
       'Constraint Satisfaction',
       'Conflict Detection',
@@ -253,14 +240,7 @@ export const mainProjects: Project[] = [
         { from: 'store', to: 'auth' },
       ],
     },
-    technologies: [
-      'Python',
-      'ArcFace',
-      'OpenCV',
-      'AES',
-      'RSA',
-      'Cryptography',
-    ],
+    technologies: ['Python', 'ArcFace', 'OpenCV', 'AES', 'RSA', 'Cryptography'],
     concepts: [
       'Face Detection',
       'Face Recognition',
@@ -300,6 +280,7 @@ export const secondaryProjects: SecondaryProject[] = [
       'Document translation system leveraging Large Language Models for context-aware multilingual translation.',
     github: 'https://github.com/farahbanhakeia/LLM-Document-Translator',
     tags: ['NLP', 'LLM', 'Translation', 'Python'],
+    category: 'NLP / AI',
   },
   {
     title: 'TSP UAV Optimization Algorithms',
@@ -308,6 +289,7 @@ export const secondaryProjects: SecondaryProject[] = [
     github:
       'https://github.com/farahbanhakeia/TSP-UAV-Optimization-Algorithms-GWO-CS-TS-',
     tags: ['Optimization', 'Metaheuristics', 'GWO', 'Python'],
+    category: 'OPTIMIZATION',
   },
   {
     title: 'Breast Cancer Prediction',
@@ -315,6 +297,7 @@ export const secondaryProjects: SecondaryProject[] = [
       'Machine learning classification pipeline for breast cancer diagnosis from clinical features.',
     github: 'https://github.com/farahbanhakeia',
     tags: ['ML', 'Classification', 'Healthcare', 'Scikit-learn'],
+    category: 'DATA SCIENCE',
   },
   {
     title: 'Ultra-Marathon Data Analysis',
@@ -322,5 +305,6 @@ export const secondaryProjects: SecondaryProject[] = [
       'Exploratory data analysis and statistical modeling of ultra-marathon race data.',
     github: 'https://github.com/farahbanhakeia',
     tags: ['Data Analysis', 'Statistics', 'Pandas', 'Visualization'],
+    category: 'DATA ANALYTICS',
   },
 ]

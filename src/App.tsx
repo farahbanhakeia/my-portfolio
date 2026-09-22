@@ -1,12 +1,13 @@
 import Navbar from './components/Navbar'
 import Hero from './sections/Hero'
-import Profile from './sections/Profile'
+import About from './sections/About'
+import WhatIBuild from './sections/WhatIBuild'
 import Projects from './sections/Projects'
+import DataPipeline from './sections/DataPipeline'
+import Skills from './sections/Skills'
 import Experience from './sections/Experience'
-import Expertise from './sections/Expertise'
-import Research from './sections/Research'
+import HowIWork from './sections/HowIWork'
 import Education from './sections/Education'
-import Github from './sections/Github'
 import Contact from './sections/Contact'
 import Footer from './sections/Footer'
 
@@ -15,13 +16,14 @@ export default function App() {
     <div className="min-h-screen bg-bg-primary">
       <Navbar />
       <Hero />
-      <Profile />
+      <About />
+      <WhatIBuild />
       <Projects />
+      <DataPipeline />
+      <Skills />
       <Experience />
-      <Expertise />
-      <Research />
+      <HowIWork />
       <Education />
-      <Github />
       <Contact />
       <Footer />
     </div>

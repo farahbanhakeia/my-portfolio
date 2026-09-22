@@ -1,19 +1,20 @@
-interface SectionHeaderProps {
-  number: string
+interface Props {
+  label: string
   title: string
+  description?: string
+  center?: boolean
 }
 
-export default function SectionHeader({ number, title }: SectionHeaderProps) {
+export default function SectionHeader({ label, title, description, center }: Props) {
   return (
-    <div className="flex items-center gap-4 mb-12 md:mb-16">
-      <span className="font-mono text-sm text-accent tracking-wider">
-        {number}
-      </span>
-      <div className="h-px flex-1 bg-border" />
-      <h2 className="font-serif text-base tracking-[0.15em] text-text-secondary uppercase">
-        {title}
-      </h2>
-      <div className="h-px flex-1 bg-border" />
+    <div className={`mb-12 ${center ? 'text-center' : ''}`}>
+      <p className="font-mono text-xs text-accent tracking-[0.2em] mb-3">{label}</p>
+      <h2 className="text-2xl md:text-3xl font-bold tracking-tight">{title}</h2>
+      {description && (
+        <p className={`text-text-secondary text-sm mt-4 max-w-2xl ${center ? 'mx-auto' : ''}`}>
+          {description}
+        </p>
+      )}
     </div>
   )
 }

@@ -35,11 +35,11 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             initial={{ opacity: 0, y: 40, scale: 0.97 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 40, scale: 0.97 }}
-            transition={{ duration: 0.35, type: 'spring', stiffness: 300, damping: 30 }}
-            className="w-full max-w-4xl bg-white border border-accent/10 rounded-2xl my-8 shadow-xl shadow-accent/5"
+            transition={{ duration: 0.3 }}
+            className="w-full max-w-4xl bg-white border border-border rounded-2xl my-8 shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-center justify-between p-6 border-b border-accent/8">
+            <div className="flex items-center justify-between p-6 border-b border-border">
               <div>
                 <span className="font-mono text-xs text-accent tracking-wider">
                   {project.badge}
@@ -50,7 +50,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
               </div>
               <button
                 onClick={onClose}
-                className="p-2 text-text-muted hover:text-accent hover:bg-accent/5 rounded-lg transition-all"
+                className="p-2 text-text-muted hover:text-accent hover:bg-bg-secondary rounded-lg transition-colors"
               >
                 <X size={20} />
               </button>
@@ -59,14 +59,14 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             <div className="p-6 md:p-8 space-y-8">
               <div className="flex flex-col md:flex-row gap-8">
                 <div className="flex-1">
-                  <p className="text-text-secondary leading-relaxed">
+                  <p className="text-text-secondary text-sm leading-relaxed">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2 mt-4">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 font-mono text-xs text-text-muted border border-accent/10 rounded-lg"
+                        className="px-2.5 py-1 font-mono text-[11px] text-text-muted border border-border rounded-md"
                       >
                         {tech}
                       </span>
@@ -82,7 +82,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 </div>
               </div>
 
-              <div className="h-px bg-accent/8" />
+              <div className="h-px bg-border" />
 
               {sectionLabels.map(({ key, num, label }) => (
                 <div key={key}>
@@ -95,14 +95,14 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 </div>
               ))}
 
-              <div className="h-px bg-accent/8" />
+              <div className="h-px bg-border" />
 
               <div className="flex gap-4">
                 <a
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-accent to-accent-warm text-white font-mono text-xs tracking-wider rounded-xl hover:shadow-md hover:shadow-accent/20 transition-all"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-white font-mono text-xs tracking-wider rounded-lg hover:bg-accent-dim transition-colors"
                 >
                   SOURCE CODE
                   <ExternalLink size={14} />
