@@ -96,8 +96,8 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-text-primary text-lg md:text-xl leading-relaxed mb-4"
           >
-            I combine a foundation in Mathematics and Computer Science with a
-            specialization in Data Science and Intelligent Systems.
+            Data & AI Engineer with a dual foundation in Mathematics and
+            Computer Science, specializing in Data Science and Intelligent Systems.
           </motion.p>
 
           <motion.p
@@ -107,10 +107,10 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-text-secondary leading-relaxed mb-4"
           >
-            My approach consists of transforming complex problems into
-            measurable, optimizable and actionable systems. From raw data
-            exploration to model deployment, I design end-to-end pipelines
-            that balance analytical rigor with engineering pragmatism.
+            I transform complex business problems into measurable, optimizable
+            systems. From raw data ingestion to model deployment, I design
+            end-to-end pipelines that deliver actionable intelligence while
+            maintaining production-grade reliability.
           </motion.p>
 
           <motion.p
@@ -120,11 +120,11 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-text-secondary leading-relaxed mb-6"
           >
-            During my internships, I built Power BI dashboards for maritime
-            operations analysis at Marsa Maroc, and designed a constraint-based
-            scheduling engine at CMC. My projects span computer vision
-            benchmarking, multi-agent AI systems, biometric security, and
-            data-driven optimization.
+            During my internships, I built Power BI dashboards for operational
+            analysis at Marsa Maroc and designed a constraint-based scheduling
+            engine at CMC. My project portfolio spans computer vision benchmarking,
+            multi-agent AI systems, biometric security, and combinatorial
+            optimization.
           </motion.p>
 
           <div className="flex flex-wrap gap-2">

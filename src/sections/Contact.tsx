@@ -29,7 +29,7 @@ export default function Contact() {
           transition={{ duration: 0.6, delay: 0.05 }}
           className="text-2xl md:text-3xl font-bold tracking-tight mb-4"
         >
-          Let's build something with data.
+          Let's build something intelligent.
         </motion.h2>
 
         <motion.p
@@ -39,8 +39,8 @@ export default function Contact() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-text-secondary text-sm max-w-md mx-auto mb-10"
         >
-          Open to collaborations in Data Science, Machine Learning, AI
-          Engineering and Optimization.
+          Actively seeking internship and collaboration opportunities in
+          Data Science, Machine Learning, and AI Engineering.
         </motion.p>
 
         <motion.a

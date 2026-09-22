@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { ExternalLink, ArrowRight } from 'lucide-react'
 import SectionHeader from '../components/SectionHeader'
 import ProjectModal from '../components/ProjectModal'
+import AnimatedSchema from '../components/AnimatedSchema'
 import { mainProjects, secondaryProjects } from '../data/projects'
 import type { Project } from '../data/projects'
 
@@ -25,11 +26,11 @@ export default function Projects() {
           <SectionHeader
             label="PROJECTS"
             title="Selected Work"
-            description="End-to-end systems built from problem definition to deployment, covering AI engineering, data science, computer vision, and optimization."
+            description="End-to-end systems designed, built, and validated — from problem definition to working prototype."
           />
         </motion.div>
 
-        <div className="space-y-6">
+        <div className="space-y-8">
           {mainProjects.map((project, pi) => (
             <motion.div
               key={project.id}
@@ -42,28 +43,24 @@ export default function Projects() {
             >
               <div className="flex flex-col lg:flex-row lg:items-start gap-6">
                 <div className="flex-1 min-w-0">
-                  <span className="inline-block font-mono text-[11px] text-accent tracking-wider mb-3">
-                    {project.badge}
-                  </span>
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="inline-block font-mono text-[10px] text-text-primary bg-accent/15 px-2.5 py-1 rounded-full tracking-wider border border-accent/20">
+                      {project.badge}
+                    </span>
+                    <span className="font-mono text-[10px] text-text-muted tracking-wider">
+                      {project.number}
+                    </span>
+                  </div>
 
                   <h3 className="text-lg md:text-xl font-semibold text-text-primary mb-3 group-hover:text-accent-dim transition-colors duration-300">
                     {project.title}
                   </h3>
 
-                  <p className="text-text-secondary text-sm leading-relaxed mb-4">
+                  <p className="text-text-secondary text-sm leading-relaxed mb-5">
                     {project.description}
                   </p>
 
-                  <div className="mb-4">
-                    <p className="font-mono text-[10px] text-text-muted tracking-wider mb-2">
-                      APPROACH
-                    </p>
-                    <p className="text-text-secondary text-sm leading-relaxed">
-                      {project.sections.architecture}
-                    </p>
-                  </div>
-
-                  <div className="flex flex-wrap gap-2 mb-6">
+                  <div className="flex flex-wrap gap-2 mb-5">
                     {project.technologies.map((tech) => (
                       <motion.span
                         key={tech}
@@ -80,7 +77,7 @@ export default function Projects() {
                       onClick={() => setSelectedProject(project)}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-accent-dim to-accent text-text-primary text-xs font-medium rounded-lg hover:shadow-md hover:shadow-accent/20 transition-all animate-gradient"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-accent-dim to-accent text-text-primary text-xs font-medium rounded-lg hover:shadow-md hover:shadow-accent/20 transition-all animate-gradient"
                     >
                       Case Study
                       <ArrowRight size={14} />
@@ -91,7 +88,7 @@ export default function Projects() {
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="inline-flex items-center gap-2 px-4 py-2 glass text-text-muted text-xs font-medium rounded-lg hover:text-accent transition-colors"
+                      className="inline-flex items-center gap-2 px-4 py-2.5 glass text-text-muted text-xs font-medium rounded-lg hover:text-accent transition-colors"
                     >
                       GitHub
                       <ExternalLink size={14} />
@@ -99,23 +96,12 @@ export default function Projects() {
                   </div>
                 </div>
 
-                <div className="hidden lg:block lg:w-48 flex-shrink-0">
-                  <p className="font-mono text-[10px] text-text-muted tracking-wider mb-3">
-                    KEY METRICS
+                <div className="lg:w-[280px] flex-shrink-0">
+                  <p className="font-mono text-[10px] text-text-muted tracking-[0.15em] mb-3">
+                    ARCHITECTURE
                   </p>
-                  <div className="space-y-2">
-                    {project.concepts.slice(0, 4).map((concept, ci) => (
-                      <motion.div
-                        key={concept}
-                        initial={{ opacity: 0, x: 10 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.3, delay: 0.3 + ci * 0.06 }}
-                        className="px-3 py-2 bg-white/40 rounded-md font-mono text-[11px] text-text-secondary border border-border hover:bg-accent/10 hover:border-accent/30 transition-all"
-                      >
-                        {concept}
-                      </motion.div>
-                    ))}
+                  <div className="p-4 glass rounded-lg">
+                    <AnimatedSchema projectId={project.id} compact />
                   </div>
                 </div>
               </div>

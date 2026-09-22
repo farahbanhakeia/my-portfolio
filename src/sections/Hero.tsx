@@ -57,7 +57,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-text-secondary text-lg md:text-xl leading-relaxed max-w-2xl mb-4"
         >
-          Building intelligent systems from data to deployment.
+          Turning complex data into intelligent, production-ready systems.
         </motion.p>
 
         <motion.p
@@ -66,9 +66,9 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-text-muted text-sm md:text-base leading-relaxed max-w-xl mb-8"
         >
-          Data & AI Engineer with a strong foundation in Mathematics and Computer
-          Science. I design end-to-end pipelines — from raw data exploration to
-          model deployment — balancing analytical rigor with engineering pragmatism.
+          MSc Data Science student with a foundation in Mathematics and Computer
+          Science. I architect end-to-end pipelines — from raw data ingestion to
+          model deployment — combining analytical rigor with engineering discipline.
         </motion.p>
 
         <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-10">
@@ -106,7 +106,7 @@ export default function Hero() {
             whileTap={{ scale: 0.97 }}
             className="px-7 py-3 bg-gradient-to-r from-accent-dim to-accent text-text-primary text-sm font-medium rounded-xl hover:shadow-lg hover:shadow-accent/30 transition-all duration-300 animate-gradient"
           >
-            Explore Projects
+            View Projects
           </motion.a>
           <motion.a
             href="#contact"
