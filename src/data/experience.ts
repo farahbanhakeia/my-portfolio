@@ -7,15 +7,17 @@ export interface Experience {
   description: string
   bullets: string[]
   technologies: string[]
+  logo?: string
 }
 
 export const experiences: Experience[] = [
   {
-    period: '2026 — PRESENT',
-    current: true,
+    period: '2026 — 6 MONTHS',
+    current: false,
     title: 'AI & Optimization Engineer (Internship)',
     company: 'CMC',
     location: 'Oriental, Morocco',
+    logo: 'cmc',
     description:
       'Designing and implementing a constraint satisfaction engine for academic scheduling within an Agile team.',
     bullets: [
@@ -35,11 +37,12 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    period: '2025 — 6 MONTHS',
+    period: '2023 — 6 MONTHS',
     current: false,
     title: 'Data Analyst & Developer (Internship)',
     company: 'Marsa Maroc',
     location: 'Morocco',
+    logo: 'marsa',
     description:
       'Analyzed maritime operational data and developed analytical dashboards for key performance indicators.',
     bullets: [
